@@ -17,4 +17,4 @@ jobs:
     - name: Build the Docker image
       run: docker build -t tackboon/docker-react -f Dockerfile.dev .
     - name: Test the Docker image
-      run: docker run tackboon/docker-react yarn test -- --coverage
+      run: docker run -e CI=true tackboon/docker-react yarn test
